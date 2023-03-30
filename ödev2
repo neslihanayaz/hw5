@@ -183,7 +183,7 @@ class Test_OdevClass:
         shopping.click()
         self.driver.save_screenshot(f"{self.folderPath}/test-add-cart-{username}-{password}.png")
         
-    @pytest.mark.parametrize("username,password,firstname,lastname,zip", [("standard_user","secret_sauce","Hümanur","Sağman","123"),("standard_user","secret_sauce","Alperen","Cesur","456"),("standard_user","secret_sauce","Furkan","Ertek","789")])
+    @pytest.mark.parametrize("username,password,firstname,lastname,zip", [("standard_user","secret_sauce","neso","a","11"),("standard_user","secret_sauce","onur","q","22"),("standard_user","secret_sauce","elif","a","33")])
     def test_information(self,username,password,firstname,lastname,zip):
         self.waitForElementVisible((By.ID, "user-name")) 
         usernameInput = self.driver.find_element(By.ID, "user-name")
